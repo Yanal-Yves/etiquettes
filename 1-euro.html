@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Feuille d'Étiquettes WeasyPrint Statique</title>
+    <title>Feuille d'Étiquettes WeasyPrint Statique et Centrée</title>
     <style>
-        /* Définition de la taille de la page pour WeasyPrint */
+        /* 1. Définition de la taille du PAPIER pour WeasyPrint */
         @page {
-            size: 19.7cm 14.3cm; /* Largeur x Hauteur */
-            margin: 0; /* Pas de marges de page pour maximiser l'espace */
+            /* PAPIER: 210 mm (21.0cm) x 160 mm (16.0cm) */
+            size: 21.0cm 16.0cm; 
+            margin: 0; /* Pas de marges par défaut sur le papier */
         }
 
         body {
+            /* 2. Dimensions du TABLEAU D'ÉTIQUETTES (197mm x 143mm) */
             width: 19.7cm;
             height: 14.3cm;
-            margin: 0;
+            
+            /* 3. CENTRAGE HORIZONTAL */
+            /* La marge supérieure est 0 (pas de centrage vertical) */
+            /* La marge horizontale est "auto" pour centrer le bloc (body) dans l'espace restant du papier */
+            margin: 0 auto 0 auto;
             padding: 0;
             /* Utilisation de la grille CSS pour le placement des étiquettes */
             display: grid;
             /* 14 colonnes (étiquettes en longueur) */
-            grid-template-columns: repeat(14, 1fr); 
-            /* 14 lignes (étiquettes en hauteur) */
+            grid-template-columns: repeat(14, 1fr);
+             /* 14 lignes (étiquettes en hauteur) */
             grid-template-rows: repeat(14, 1fr);
             box-sizing: border-box; 
             font-family: Arial, sans-serif;
@@ -32,7 +38,7 @@
             display: flex; 
             justify-content: center;
             align-items: center;
-            border: 1px solid black; /* Bordure visible pour le test. À supprimer pour l'impression finale. */
+            border: 1px solid black; /* Bordure visible pour le test. À supprimer pour l'impression finale. */ 
             box-sizing: border-box;
             font-size: 12pt;
             font-weight: bold;
