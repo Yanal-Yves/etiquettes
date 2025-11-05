@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feuille d'Étiquettes WeasyPrint Statique</title>
+    <style>
+        /* Définition de la taille de la page pour WeasyPrint */
+        @page {
+            size: 19.7cm 14.3cm; /* Largeur x Hauteur */
+            margin: 0; /* Pas de marges de page pour maximiser l'espace */
+        }
+
+        body {
+            width: 19.7cm;
+            height: 14.3cm;
+            margin: 0;
+            padding: 0;
+            /* Utilisation de la grille CSS pour le placement des étiquettes */
+            display: grid;
+            /* 14 colonnes (étiquettes en longueur) */
+            grid-template-columns: repeat(14, 1fr); 
+            /* 14 lignes (étiquettes en hauteur) */
+            grid-template-rows: repeat(14, 1fr);
+            box-sizing: border-box; 
+            font-family: Arial, sans-serif;
+            page-break-after: always;
+        }
+
+        /* Style pour chaque étiquette */
+        .etiquette {
+            width: 100%;
+            height: 100%;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black; /* Bordure visible pour le test. À supprimer pour l'impression finale. */
+            box-sizing: border-box;
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+    <div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div><div class="etiquette">0,50 €</div>
+</body>
+</html>
