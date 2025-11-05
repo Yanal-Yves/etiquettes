@@ -3,22 +3,18 @@
 <head>
     <title>Feuille d'Étiquettes WeasyPrint Statique et Centrée</title>
     <style>
-        /* 1. Définition de la taille du PAPIER pour WeasyPrint */
         @page {
-            /* PAPIER: 210 mm (21.0cm) x 160 mm (16.0cm) */
+            /* Papier : 210 mm (21.0cm) x 160 mm (16.0cm) */
             size: 21.0cm 16.0cm; 
             margin: 0; /* Pas de marges par défaut sur le papier */
         }
 
         body {
-            /* 2. Dimensions du TABLEAU D'ÉTIQUETTES (197mm x 143mm) */
+            /* Dimensions du TABLEAU D'ÉTIQUETTES (197mm x 143mm) */
             width: 19.7cm;
             height: 14.3cm;
             
-            /* 3. CENTRAGE HORIZONTAL */
-            /* La marge supérieure est 0 (pas de centrage vertical) */
-            /* La marge horizontale est "auto" pour centrer le bloc (body) dans l'espace restant du papier */
-            margin: 0 auto 0 auto;
+            margin: 0 auto 0 auto; /* centrage horizontal */
             padding: 0;
             /* Utilisation de la grille CSS pour le placement des étiquettes */
             display: grid;
@@ -31,19 +27,24 @@
             page-break-after: always;
         }
 
-        /* Style pour chaque étiquette */
+        /* Style pour chaque étiquette (Style par défaut : Centré verticalement) */
         .etiquette {
             width: 100%;
             height: 100%;
             display: flex; 
-            justify-content: center;
-            align-items: center;
-            border: 1px solid black; /* Bordure visible pour le test. À supprimer pour l'impression finale. */ 
+            justify-content: center; /* Centrage horizontal */
+            align-items: center;    /* Centrage vertical par défaut */
+            border: 0px solid black; 
             box-sizing: border-box;
             font-size: 12pt;
             font-weight: bold;
             text-align: center;
             line-height: 1;
+        }
+
+        /* Cible les 14 premières div.etiquette qui sont enfants du body => c.a.d la première ligne */
+        body > .etiquette:nth-child(-n+14) {
+            align-items: flex-end; /* Alignement en bas */
         }
     </style>
 </head>
