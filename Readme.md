@@ -24,3 +24,5 @@ The Weasyprint executable is already in the current folder
 GeneratePdf.cmd
 ```
 
+![alt text](image.png)
+
