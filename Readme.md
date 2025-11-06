@@ -1,3 +1,5 @@
+Création de PDF d'étiquette de prix 14 x 14 (193 x 143)
+
 # GNU/Linux
 ## Installation
 ``` bash
