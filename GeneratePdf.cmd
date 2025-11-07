@@ -1,5 +1,5 @@
 @echo off
-setlocal
+SETLOCAL EnableDelayedExpansion
 
 set "OUTPUT_DIR=.\Pdf"
 set "WEASYPRINT_EXE=weasyprint.exe"
