@@ -3,6 +3,8 @@ set -e
 
 mkdir -p ./Pdf
 
+source venv/bin/activate
+
 weasyprint --encoding utf-8 0.50-euro.html ./Pdf/0.50-euro.pdf
 echo "0.50-euro.pdf generated"
 
