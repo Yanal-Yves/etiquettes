@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Bande d'étiquettes pour tableau électrique</title>
+    <style>
+        @page {
+            size: A4 landscape; /* 29.7 cm x 21.0 cm */
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* La bande : 23.4 cm x 2.6 cm, centrée sur la page */
+        .bande {
+            width: 23.4cm;
+            height: 2.6cm;
+            margin: 7cm auto 0 auto;
+            box-sizing: border-box;
+            /* Contour haut/bas ; les traits verticaux sont portés par les cases,
+               pour que chaque case fasse exactement 1.8 cm. */
+            border-top: 0.5pt solid black;
+            border-bottom: 0.5pt solid black;
+            display: grid;
+            grid-template-columns: repeat(13, 1.8cm);
+        }
+
+        /* Une case : 1.8 cm x 2.6 cm */
+        .case {
+            box-sizing: border-box;
+            border-left: 0.5pt solid black; /* le trait qui sépare deux cases */
+            display: flex;
+            align-items: center;     /* centrage vertical du texte */
+            justify-content: center; /* centrage horizontal du texte */
+        }
+
+        /* La dernière case ferme la bande à droite */
+        .case:last-child {
+            border-right: 0.5pt solid black;
+        }
+
+        /* Texte pivoté de 90° vers la gauche (se lit de bas en haut).
+           La largeur du span devient la hauteur du texte une fois pivoté :
+           2.4 cm, soit la hauteur de la case moins 1 mm de marge. */
+        .case span {
+            flex: none; /* ne pas rétrécir le texte pour tenir dans la case */
+            width: 2.4cm;
+            transform: rotate(-90deg);
+            text-align: center;
+            font-size: 11pt;
+            line-height: 1.15;
+        }
+
+        /* Repère pour vérifier que l'impression n'a pas été mise à l'échelle */
+        .controle {
+            width: 10cm;
+            margin: 2cm auto 0 auto;
+            border-top: 0.5pt solid black;
+            text-align: center;
+            font-size: 8pt;
+        }
+    </style>
+</head>
+<body>
+    <!-- Modifiez simplement le texte des 13 cases ci-dessous. -->
+    <div class="bande">
+        <div class="case"><span></span></div>
+        <div class="case"><span></span></div>
+        <div class="case"><span>Plaque cuisson</span></div>
+        <div class="case"><span>Prise couloir</span></div>
+        <div class="case"><span>Lave linge</span></div>
+        <div class="case"><span>Réfrigérateur</span></div>
+        <div class="case"><span>Four + hotte</span></div>
+        <div class="case"><span>Prise Lave vaisselle</span></div>
+        <div class="case"><span>Prises salon et chambre</span></div>
+        <div class="case"><span>Chauffe-eau</span></div>
+        <div class="case"><span></span></div>
+        <div class="case"><span></span></div>
+        <div class="case"><span></span></div>
+    </div>
+
+    <!-- Supprimez ce bloc quand l'impression est réglée. -->
+    <div class="controle">Ce trait doit mesurer 10 cm à la règle. Sinon, réimprimez à l'échelle 100 % (« Taille réelle »).</div>
+</body>
+</html>
+</body>
+</html>

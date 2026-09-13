@@ -22,6 +22,13 @@ Pour générer le fichier `.pdf` et voir le rendu, exécutez le script correspon
 
 Enfin, il suffit d'imprimer sur les papiers étiquettes avec une imprimante A4. En choisissant A4 comme taille de papier, il n'y aura pas de problème avec les marges.
 
+## 🔌 Bande d'étiquettes pour tableau électrique
+Le modèle `disjoncteurs.html` produit une bande d'étiquettes à glisser sous les disjoncteurs d'un tableau électrique.
+
+**Format :** une bande de 23,4 x 2,6 cm découpée en **13 cases de 1,8 x 2,6 cm**, centrée sur une page A4 **en paysage**. Les cases étant plus hautes que larges, le texte est pivoté de 90° vers la gauche (il se lit de bas en haut). Pour changer les libellés, il suffit de modifier le texte des 13 `<span>`.
+
+⚠️ **À l'impression, choisir « Taille réelle » (échelle 100 %), jamais « Ajuster à la page ».** Le mode « ajuster » réduit la page d'environ 4 % pour tenir dans la zone imprimable, et la bande sort à 22,4 cm au lieu de 23,4 cm. Un repère imprimé sous la bande permet de le vérifier à la règle : le trait doit mesurer exactement 10 cm. Une fois l'impression réglée, ce repère peut être supprimé (bloc `<div class="controle">`).
+
 ## ⚙️ Installation
 
 

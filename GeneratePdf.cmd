@@ -4,7 +4,7 @@ SETLOCAL EnableDelayedExpansion
 set "OUTPUT_DIR=.\Pdf"
 set "WEASYPRINT_EXE=weasyprint.exe"
 
-set "FILES_TO_PROCESS=0.50-euro 1-euro 2-euros 3-euros 4-euros"
+set "FILES_TO_PROCESS=0.50-euro 1-euro 2-euros 3-euros 4-euros disjoncteurs"
 
 if not exist "%OUTPUT_DIR%\" (
     mkdir "%OUTPUT_DIR%"

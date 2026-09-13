@@ -2,7 +2,7 @@
 set -e
 
 OUTPUT_DIR="./Pdf"
-FILES=("0.50-euro" "1-euro" "2-euros" "3-euros" "4-euros")
+FILES=("0.50-euro" "1-euro" "2-euros" "3-euros" "4-euros" "disjoncteurs")
 
 mkdir -p "$OUTPUT_DIR"
 echo "Dossier $OUTPUT_DIR vérifié/créé."
